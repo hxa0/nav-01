@@ -1,0 +1,181 @@
+/* css reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* style */
+
+body {
+    background-color: #eee;
+}
+
+
+/* 顶部搜索版块 */
+
+.globalHeader {
+    /* border: 1px solid red; */
+    margin: 20px 20px 15px;
+}
+
+.searchForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.globalHeader .searchForm>input {
+    width: 100%;
+    margin-right: 20px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+}
+
+.globalHeader .searchForm>button {
+    height: 40px;
+    background-color: #0A7FB0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #fff;
+    white-space: nowrap;
+    /* flex布局后空间压缩，字体上下布局*/
+    padding: 0 20px;
+    /*撑开按钮宽度*/
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.globalMain {
+    /* border: 1px solid red; */
+    margin: 0 20px;
+}
+
+
+/*消除PC端对手机端的影响*/
+
+@media (max-width: 500px) {
+    .siteList {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.siteList li {
+    margin-bottom: 15px;
+    /*border: 1px solid blue;*/
+}
+
+.siteList .site {
+    width: 160px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.siteList .site .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+}
+
+.globalMain .logo {
+    width: 90PX;
+    height: 70px;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 60px;
+}
+
+.siteList .link {
+    font-size: 14px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.globalMain .addButton {
+    width: 160px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.globalMain .addButton .iconWrapper {
+    width: 90PX;
+    height: 70px;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 60px;
+}
+
+@media (min-width: 500px) {
+    .searchForm {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+    .siteList {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -25px;
+        cursor: pointer;
+    }
+    .globalMain {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+    }
+    .globalMain li {
+        margin-right: 25px;
+        transition: all 0.5s;
+    }
+    .siteList .close {
+        display: none;
+    }
+    .siteList .site:hover .close {
+        display: block;
+        cursor: default;
+    }
+    li:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+/* @media (min-width:500px) {
+    
+} */
