@@ -175,7 +175,20 @@ body {
     }
 }
 
-
+/*360宽度手机适配*/
+@media (max-width:360px) {
+    .globalMain {
+        min-width: 360px;
+        /* border: 1px solid red; */
+        margin: 0 10px;
+    }
+    .globalHeader {
+        /* border: 1px solid red; */
+        min-width: 360px;
+        margin: 20px 10px 15px;
+    }
+}
+/*尺寸用px比较繁琐，需要添加多个媒体查询，实际上用vh单位较好*/
 /* @media (min-width:500px) {
     
 } */
